@@ -2,7 +2,7 @@ import fs from 'fs';
 import express from 'express';
 
 const app = express();
-const colorFilePath = 'currentColor.txt'; // File to store the current color
+const colorFilePath = './api/currentColor.txt'; // File to store the current color
 const adminPassword = 'your_admin_password'; // Change this to your desired admin password
 
 // Color map to convert color names to hex values
@@ -31,7 +31,7 @@ app.post('/change-color', (req, res) => {
 
     // Replace color in HTML file
     readCurrentColorFromFile((oldColor) => {
-        replaceColorInHTML('client/src/Components/sample.html', oldColor, colorToUse);
+        replaceColorInHTML('../client/src/Components/sample.html', oldColor, colorToUse);
         res.send('Color changed successfully');
     });
 });

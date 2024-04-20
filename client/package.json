@@ -4,14 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"npm run dev-react\" \"npm run dev-server\"",
-    "dev-react": "vite",
-    "dev-server": "node ./api/main.js",
+    "start": "concurrently \"npm run start-frontend\" \"npm run start-server\"",
+    "start-frontend": "vite",
+    "start-server": "node ./api/main.js",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "start-server": "node ./api/main.js"
-  },
+    "preview": "vite preview"
+  }
+  ,
   "dependencies": {
     "express": "^4.19.2",
     "react": "^18.2.0",
