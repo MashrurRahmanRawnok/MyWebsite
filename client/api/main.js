@@ -31,7 +31,7 @@ app.post('/change-color', (req, res) => {
 
     // Replace color in HTML file
     readCurrentColorFromFile((oldColor) => {
-        replaceColorInHTML('/home/mashrur/Documents/My Personal Website/client/src/Components/sample.html', oldColor, colorToUse);
+        replaceColorInHTML('client/src/Components/sample.html', oldColor, colorToUse);
         res.send('Color changed successfully');
     });
 });
